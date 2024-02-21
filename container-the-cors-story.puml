@@ -1,0 +1,31 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' uncomment the following line and comment the first line to use the file locally
+' !include C4_Container.puml
+
+LAYOUT_TOP_DOWN()
+' LAYOUT_AS_SKETCH()
+' LAYOUT_WITH_LEGEND()
+
+title The Story of CORS
+
+Person(customer, "Customer", "Uses online banking to manage financial transactions and personal accounts")
+Container(webBrowser, "Web Browser", "Google Chrome 121.0.6167.161", "Requests information, renders web pages, executes scripts, manages resources, ensures security, offers user interface and navigation, provides compatibility and standards compliance, supports accessibility")
+
+System_Boundary(system-boundary, "GuardianBank Online Banking System") {
+    Container(onlineBankingFrontEnd, "Online Banking Front-end App", "vue.js 3.3.4 / npm", "Presents user interface, handles user interaction, displays data, validates input")
+    Container(onlineBankingApi, "Online Banking Back-end App", "Spring boot 3.1.4 / gradle", "Processes and stores data, manages security, implements business logic, and provides API interface services")
+    Container(db, "Database", "PostgreSQL 15.4 / docker compose", "Stores/retrieves/updates data, maintains data security and integrity, manages transactions, provides reporting and analysis")
+}
+
+Container(investSmartWebSite, "Invest Smart Web Site", "html & javascript", "Provides professional appearance and investment information, embeds malicious code, uses the user's browser as a stepping stone, simulates legitimate banking operations, bypasses security measures")
+
+Rel(customer, webBrowser, "Manages financial transactions and personal accounts. Browses investment articles", "GUI")
+Rel(webBrowser, onlineBankingFrontEnd, "Handles user interaction and displays data", "JSON/HTTP")
+Rel(webBrowser, investSmartWebSite, "Provides professional appearance and investment information", "JSON/HTTP")
+
+Rel(onlineBankingFrontEnd, onlineBankingApi, "Accesses financial transaction and personal account management API interface", "JSON/HTTP")
+Rel(investSmartWebSite, onlineBankingApi, "Simulates legitimate banking operations", "JSON/HTTP")
+Rel(onlineBankingApi, db, "Queries and updates financial transaction and personal account data", "JDBC")
+
+@enduml

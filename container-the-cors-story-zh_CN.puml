@@ -1,0 +1,31 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' uncomment the following line and comment the first line to use the file locally
+' !include C4_Container.puml
+
+LAYOUT_TOP_DOWN()
+' LAYOUT_AS_SKETCH()
+' LAYOUT_WITH_LEGEND()
+
+title 恶意转走银行存款的故事的架构图
+
+Person(customer, "客户", "使用网上银行, 管理金融交易, 和个人账户")
+Container(webBrowser, "Web浏览器", "请求信息, 呈现网页, 执行脚本, 管理资源, 确保安全性, 提供用户界面和导航, 提供兼容性和标准合规性, 支持可访问性")
+
+System_Boundary(system-boundary, "GuardianBank 网上银行系统") {
+    Container(onlineBankingFrontEnd, "网上银行前端App", "vue.js 3.3.4 / npm", "呈现用户界面, 处理用户交互, 显示数据, 验证输入")
+    Container(onlineBankingApi, "网上银行后端App", "Spring boot 3.1.4 / gradle", "处理和存储数据, 管理安全, 实现业务逻辑, 提供API接口服务")
+    Container(db, "数据库", "PostgreSQL 15.4 / docker compose", "存储/检索/更新数据, 维护数据安全性和完整性, 管理事务, 提供报告和分析")
+}
+
+Container(investSmartWebSite, "Invest Smart 网络诈骗网站", "html & javascript", "提供专业的外观和投资信息, 嵌入恶意代码, 使用用户的浏览器作为垫脚石, 模拟合法的银行操作, 绕过安全措施")
+
+Rel(customer, webBrowser, "管理金融交易, 和个人账户, 浏览投资文章", "GUI")
+Rel(webBrowser, onlineBankingFrontEnd, "处理用户交互, 并显示数据", "JSON/HTTP")
+Rel(webBrowser, investSmartWebSite, "提供专业外观, 和投资信息", "JSON/HTTP")
+
+Rel(onlineBankingFrontEnd, onlineBankingApi, "访问金融交易, 和个人账户管理, API接口", "JSON/HTTP")
+Rel(investSmartWebSite, onlineBankingApi, "假冒合法的银行业务", "JSON/HTTP")
+Rel(onlineBankingApi, db, "查询和更新金融交易, 及个人账户数据", "JDBC")
+
+@enduml
