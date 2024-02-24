@@ -24,4 +24,4 @@ spec:
         - name: DB_HOST
           value: shopping-list-postgres
         - name: ALLOWED_ORIGIN
-          value: "localhost"
+          value: "http://20.72.130.209/"
