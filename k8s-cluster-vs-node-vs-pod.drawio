@@ -1,0 +1,175 @@
+<mxfile host="65bd71144e">
+    <diagram id="aosJKq3CApJecX1fFcur" name="Page-1">
+        <mxGraphModel dx="931" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;h1&gt;K8S CLUSTER (identified by kubectl context)&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;strokeWidth=5;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="210" width="800" height="670" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="NODE (CONTROL PLANE)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;strokeWidth=3;perimeterSpacing=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="280" width="170" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="330" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="390" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="330" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="390" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="NODE (CONTROL PLANE)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="480" width="170" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="530" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="590" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="530" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="590" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="NODE (WORKER)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="280" width="570" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="group;fillColor=none;fillStyle=solid;gradientColor=none;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="250" y="310" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="14">
+                    <mxGeometry width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="CONTAINER" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="14">
+                    <mxGeometry x="20" y="30" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="FRONT-END APP" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=0;strokeColor=none;" vertex="1" parent="14">
+                    <mxGeometry x="32.5" y="60" width="105" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="430" y="310" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="16">
+                    <mxGeometry width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="CONTAINER" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="16">
+                    <mxGeometry x="20" y="30" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="BACK-END APP" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=0;strokeColor=none;" vertex="1" parent="16">
+                    <mxGeometry x="32.5" y="60" width="105" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="610" y="310" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="23">
+                    <mxGeometry width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="CONTAINER" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="23">
+                    <mxGeometry x="20" y="30" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="POSTGRES" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=0;strokeColor=none;" vertex="1" parent="23">
+                    <mxGeometry x="32.5" y="60" width="105" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="NODE (WORKER)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="480" width="570" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="group;fillColor=none;fillStyle=solid;gradientColor=none;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="250" y="510" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="37">
+                    <mxGeometry width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="CONTAINER" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="37">
+                    <mxGeometry x="20" y="30" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="FRONT-END APP" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=0;strokeColor=none;" vertex="1" parent="37">
+                    <mxGeometry x="32.5" y="60" width="105" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="430" y="510" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="41">
+                    <mxGeometry width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="CONTAINER" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="41">
+                    <mxGeometry x="20" y="30" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="BACK-END APP" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=0;strokeColor=none;" vertex="1" parent="41">
+                    <mxGeometry x="32.5" y="60" width="105" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="610" y="510" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="45">
+                    <mxGeometry width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="CONTAINER" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="45">
+                    <mxGeometry x="20" y="30" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="POSTGRES" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=0;strokeColor=none;" vertex="1" parent="45">
+                    <mxGeometry x="32.5" y="60" width="105" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="NODE (CONTROL PLANE)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="680" width="170" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="730" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="790" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="730" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="790" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="NODE (WORKER)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;strokeWidth=3;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="680" width="570" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="" style="group;fillColor=none;fillStyle=solid;gradientColor=none;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="250" y="710" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="55">
+                    <mxGeometry width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="CONTAINER" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="55">
+                    <mxGeometry x="20" y="30" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="FRONT-END APP" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=0;strokeColor=none;" vertex="1" parent="55">
+                    <mxGeometry x="32.5" y="60" width="105" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="430" y="710" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="59">
+                    <mxGeometry width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="CONTAINER" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="59">
+                    <mxGeometry x="20" y="30" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="BACK-END APP" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=0;strokeColor=none;" vertex="1" parent="59">
+                    <mxGeometry x="32.5" y="60" width="105" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="610" y="710" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="POD" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="63">
+                    <mxGeometry width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="CONTAINER" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="63">
+                    <mxGeometry x="20" y="30" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="POSTGRES" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=0;strokeColor=none;" vertex="1" parent="63">
+                    <mxGeometry x="32.5" y="60" width="105" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
