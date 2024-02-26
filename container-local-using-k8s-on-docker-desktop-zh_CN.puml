@@ -1,0 +1,31 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' uncomment the following line and comment the first line to use the file locally
+' !include C4_Container.puml
+
+LAYOUT_TOP_DOWN()
+' LAYOUT_AS_SKETCH()
+' LAYOUT_WITH_LEGEND()
+
+title 前后端App均部署到k8s中的架构图
+
+Person(user, "用户", "管理购物清单")
+Container(webBrowser, "Web浏览器", "请求信息, 呈现网页, 执行脚本, 管理资源, 确保安全性, 提供用户界面和导航, 提供兼容性和标准合规性, 支持可访问性")
+
+System_Boundary(system-boundary, "部署在k8s中的Shopping List Web App") {
+    System_Ext(ingress, "Shopping List Ingress", "使得用户可以通过单一的 IP 地址向外提供k8s中的多个服务，并可以配置负载均衡等高级路由功能")
+    Container(shoppingListFrontEnd, "购物清单前端App", "vue.js 3.3.4 / k8s", "呈现用户界面, 处理用户交互, 显示数据, 验证输入")
+    Container(shoppingListApi, "购物清单后端App", "Spring boot 3.1.4 / k8s", "处理和存储数据, 管理安全, 实现业务逻辑, 提供API接口服务")
+    Container(postgres, "PostgreSQL数据库", "PostgreSQL 15.4 / k8s", "存储/检索/更新数据, 维护数据安全性和完整性, 管理事务, 提供报告和分析")
+}
+
+Rel(user, webBrowser, "管理购物项", "GUI")
+Rel(webBrowser, ingress, "处理用户交互，并显示数据", "JSON/HTTP")
+
+Rel(ingress, shoppingListFrontEnd, "处理用户交互, 并显示数据", "JSON/HTTP")
+Rel(ingress, shoppingListApi, "访问购物清单API接口", "JSON/HTTP")
+
+Rel(shoppingListFrontEnd, shoppingListApi, "访问购物清单API接口", "JSON/HTTP")
+Rel(shoppingListApi, postgres, "查询与更新购物项数据", "JDBC")
+
+@enduml
